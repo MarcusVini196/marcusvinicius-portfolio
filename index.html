@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="assets/img/icone/icone.png" type="image/png">
+    <title>Marcus Vinicius Fullstack</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1 class="loggo-text">
+                    Marcus <span>Vinicius</span>
+                </h1>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-links">Inicio</a></li>
+                    <li><a href="#services" class="nav-links">Serviços</a></li>
+                    <li><a href="#about" class="nav-links">Sobre</a></li>
+                    <li><a href="#projects" class="nav-links">Projetos</a></li>
+                </ul>
+
+                <!-- Botão mobile -->
+                <div class="menu-btn" onclick="openMenu()">
+                    &#9776;
+                </div>
+
+                <!-- Menu lateral -->
+                <div id="sideMenu" class="side-menu">
+                    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+                    <ul>
+                        <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+                        <li><a href="#services" onclick="closeMenu()">Serviços</a></li>
+                        <li><a href="#about" onclick="closeMenu()">Sobre</a></li>
+                        <li><a href="#projects" onclick="closeMenu()">Projetos</a></li>
+                        <li><a href="mailto:agenciamv.orcamentos@gmail.com" class="btn">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <a href="mailto:agenciamv.orcamentos@gmail.com" class="btn">Contato</a>
+        </div>
+    </header>
+
+    <section class="hero container" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">👋 Seja bem-vindo ao meu portfólio!</h1>
+                <p class="hero-subtitle">
+                    Explore meus projetos e descubra como posso ajudar a transformar sua ideia em
+                    realidade.
+                </p>
+                <p class="hero-subtitle">
+                    💼 Solicite um orçamento personalizado para seu site ou e-commerce
+                    Entre em contato e receba uma
+                    proposta sob medida para o seu negócio.
+                </p>
+                <a href="#contact" class="btn">Entre em contato</a>
+            </div>
+            <div class="hero-content">
+                <img src="assets/img/hero.svg" alt="" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="services container" id="services">
+        <h2 class="title">Serviços</h2>
+        <div class="services-container">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="service-title">Desenvolvimento de sites institucionais</h2>
+                    <p class="service-description">Criação de sites para empresas, portfólios, profissionais autônomos,
+                        etc.</p>
+                    <p class="service-description">Recursos como blog, formulários de contato, áreas de login e
+                        administração de conteúdo.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="service-title">Lojas virtuais (E-commerce personalizado)</h2>
+                    <p class="service-description">Cadastro de produtos, carrinho, checkout, gerenciamento de pedidos.
+                    </p>
+                    <p class="service-description">Integração com pagamentos (ex: PagSeguro, Pix, Mercado Pago).</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="service-title">Landing Page (Página de Conversão)</h2>
+                    <p class="service-description">Página única, moderna e responsiva.</p>
+                    <p class="service-description">Foco em conversão com botão de contato, WhatsApp ou formulário. Ideal
+                        para lançamentos, produtos, serviços ou capturar leads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about container" id="about">
+        <h2 class="title">Sobre</h2>
+        <div class="about-container">
+            <div class="left">
+                <img src="assets/img/about.jpeg" class="left-img" alt="">
+            </div>
+            <div class="right">
+                <h3 class="about-title">
+                    Sou Marcus!
+                </h3>
+                <span class="about-work">
+                    Desenvolvedor Fullstack.
+                </span>
+                <p class="about-description">
+                    Me chamo <span>Marcus Vinicius</span> e estou atuando no desenvolvimento web de forma geral.
+                    Trabalho tanto com Front-End (HTML, CSS, JavaScript) mas futuramente estarei usando React quanto com
+                    partes do Back-End(Laravel), sempre buscando
+                    evoluir e aplicar boas práticas em cada projeto.
+
+                    Ainda estou construindo minha trajetória profissional, mas aprendo rápido, estudo continuamente e já
+                    desenvolvo projetos reais para fortalecer minhas habilidades.
+
+                    Meu objetivo é entregar soluções digitais funcionais, claras e bem estruturadas, com
+                    responsabilidade e comprometimento com o resultado final.
+                </p>
+                <p class="about-description">
+                    Objetivo Profissional:
+                </p>
+                <p class="about-description">
+
+                    Estou comprometido com meu desenvolvimento como profissional da área web e pretendo avançar para
+                    projetos mais complexos, incluindo o uso de frameworks modernos. Busco oportunidades que incentivem
+                    aprendizado contínuo e ofereçam espaço para crescimento, colaboração e aplicação prática das minhas
+                    habilidades.
+                </p>
+                <div class="social-medias">
+                    <a href="https://github.com/MarcusVini196" class="social-links"><i class="bi bi-github"></i></a>
+                    <a href="mailto:agenciamv.orcamentos@gmail.com" class="social-links"><i
+                            class="bi bi-envelope"></i></a>
+                    <a href="" class="social-links"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects container" id="projects">
+        <h2 class="title">Projetos</h2>
+        <span class="project-subtitle">Trabalhos realizados</span>
+        <div class="project-container">
+            <div class="project-content">
+                <div class="card-principal">
+                    <div class="card-project">
+                        <div class="img-project">
+                            <img src="assets/img/projetos/sistema-foco-imoveis.png">
+                        </div>
+                        <div class="contents">
+                            <h3 class="title-project">
+                                Sistema Foco Imóveis
+                            </h3>
+                            <p>
+                                Sistema Foco Imóveis: gerencie imóveis de forma prática e eficiente. Cadastro de
+                                imóveis, galerias de fotos, busca por cidade, contato com corretores e controle de
+                                clientes em uma plataforma moderna e responsiva, ideal para imobiliárias que buscam
+                                agilidade e organização no dia a dia.<br>
+                                <span>
+                                    Desenvolvido com: Laravel, Bootstrap e MySQL
+                                </span>
+                            </p>
+                            <a href="#" class="btn" target="_blank">Ver projeto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="card-principal">
+                    <div class="card-project">
+                        <div class="img-project">
+                            <img src="assets/img/projetos/Funel.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h3 class="title-project">
+                                Site Institucional
+                            </h3>
+                            <p>
+                                Site institucional desenvolvido para uma empresa fictícia, com foco em apresentar
+                                serviços e facilitar o contato com clientes.<br>
+                                <span>
+                                    Desenvolvido com: HTML, CSS e JavaScript
+                                </span>
+                            </p>
+                            <a href="https://agencia-funel.vercel.app/" class="btn" target="_blank">Ver projeto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="card-principal">
+                    <div class="card-project">
+                        <div class="img-project">
+                            <img src="assets/img/projetos/personal.png" alt="">
+                        </div>
+                        <div class="contents">
+                            <h3 class="title-project">
+                                Alex Martins personal trainer
+                            </h3>
+                            <p>
+                                Site institucional desenvolvido para uma empresa fictícia, com foco em apresentar
+                                serviços e facilitar o contato com clientes.<br>
+                                <span>
+                                    Desenvolvido com: HTML, CSS e JavaScript
+                                </span>
+                            </p>
+                            <a href="https://alexmartinspersonal.vercel.app/" class="btn" target="_blank">Ver projeto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact container" id="contact">
+        <div class="contact-container">
+            <div class="contact-content">
+                <h2 class="title">Contato</h2>
+                <p class="contact-description">
+                    Entre em contato para solicitar um orçamento personalizado para seu site ou e-commerce.
+                    Estou aqui para ajudar a transformar sua ideia em realidade!
+                </p>
+                <form id="formContato" class="form-contact">
+                    <input type="text" id="nome" class="form-input input-contact" placeholder="Seu nome" required>
+
+                    <input type="email" id="email" class="form-input input-contact" placeholder="Seu e-mail" required>
+
+                    <textarea id="mensagem" class="form-input input-contact textarea" cols="30" rows="10"
+                        placeholder="Sua mensagem" required></textarea>
+
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+
+                <p id="status"></p>
+
+            </div>
+            <div class="contact-content">
+                <img src="assets/img/contact.svg" alt="" class="contact-img">
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
