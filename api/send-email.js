@@ -4,16 +4,18 @@ export default async function handler(req, res) {
   console.log("EMAIL_USER:", process.env.EMAIL_USER);
   console.log("EMAIL_PASS existe?", !!process.env.EMAIL_PASS);
 
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.error("Variáveis de ambiente não definidas");
+    return res.status(500).json({
+      error: "Configuração de email ausente"
+    });
   }
+
 
   const { nome, email, mensagem } = req.body;
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
+    service: "gmail",
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS
@@ -35,6 +37,10 @@ ${mensagem}
 
     res.status(200).json({ success: true });
   } catch (err) {
-    res.status(500).json({ error: "Erro ao enviar email" });
+    console.error("ERRO REAL DO NODEMAILER:", err);
+    return res.status(500).json({
+      error: "Erro ao enviar email",
+      details: err.message
+    });
   }
 }
