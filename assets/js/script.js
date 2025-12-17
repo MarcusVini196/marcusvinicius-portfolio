@@ -7,12 +7,15 @@ function closeMenu() {
 }
 
 const form = document.getElementById("formContato");
-const status = document.getElementById("status");
+const loadingModal = document.getElementById("loadingModal");
+const loadingText = document.getElementById("loadingText");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  status.textContent = "Enviando...";
+  // Abrir modal
+  loadingModal.classList.add("active");
+  loadingText.textContent = "Enviando mensagem...";
 
   const data = {
     nome: document.getElementById("nome").value,
@@ -30,12 +33,24 @@ form.addEventListener("submit", async (e) => {
     });
 
     if (response.ok) {
-      status.textContent = "Mensagem enviada com sucesso!";
+      loadingText.textContent = "Mensagem enviada com sucesso! ✅";
       form.reset();
+
+      setTimeout(() => {
+        loadingModal.classList.remove("active");
+      }, 2000);
     } else {
-      status.textContent = "Erro ao enviar mensagem.";
+      loadingText.textContent = "Erro ao enviar mensagem ❌";
+
+      setTimeout(() => {
+        loadingModal.classList.remove("active");
+      }, 2000);
     }
   } catch {
-    status.textContent = "Erro de conexão.";
+    loadingText.textContent = "Erro de conexão ⚠️";
+
+    setTimeout(() => {
+      loadingModal.classList.remove("active");
+    }, 2000);
   }
-});
+})

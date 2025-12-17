@@ -140,7 +140,7 @@
                     <a href="https://github.com/MarcusVini196" class="social-links"><i class="bi bi-github"></i></a>
                     <a href="mailto:agenciamv.orcamentos@gmail.com" class="social-links"><i
                             class="bi bi-envelope"></i></a>
-                    <a href="" class="social-links"><i class="bi bi-whatsapp"></i></a>
+                    <!-- <a href="" class="social-links"><i class="bi bi-whatsapp"></i></a> -->
                 </div>
             </div>
         </div>
@@ -215,7 +215,8 @@
                                     Desenvolvido com: HTML, CSS e JavaScript
                                 </span>
                             </p>
-                            <a href="https://alexmartinspersonal.vercel.app/" class="btn" target="_blank">Ver projeto</a>
+                            <a href="https://alexmartinspersonal.vercel.app/" class="btn" target="_blank">Ver
+                                projeto</a>
                         </div>
                     </div>
                 </div>
@@ -242,7 +243,13 @@
                     <button type="submit" class="btn">Enviar</button>
                 </form>
 
-                <p id="status"></p>
+                <div id="loadingModal" class="loading-modal">
+                    <div class="loading-box">
+                        <div class="spinner"></div>
+                        <p id="loadingText">Enviando mensagem...</p>
+                    </div>
+                </div>
+
 
             </div>
             <div class="contact-content">
