@@ -107,8 +107,8 @@ Header
     padding: 10px 0;
 }
 
-.logo {
-    font-size: 18px;
+.logo a{
+    font-size: 30px;
     color: var(--text-title);
 }
 
