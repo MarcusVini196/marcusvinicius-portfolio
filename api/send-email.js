@@ -1,6 +1,9 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
+  console.log("EMAIL_USER:", process.env.EMAIL_USER);
+  console.log("EMAIL_PASS existe?", !!process.env.EMAIL_PASS);
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -16,9 +19,6 @@ export default async function handler(req, res) {
       pass: process.env.EMAIL_PASS
     }
   });
-
-  console.log("EMAIL_USER:", process.env.EMAIL_USER);
-  console.log("EMAIL_PASS existe?", !!process.env.EMAIL_PASS);
 
   try {
     await transporter.sendMail({
